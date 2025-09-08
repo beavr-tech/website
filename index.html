@@ -144,66 +144,13 @@
   </section>
 
   <!-- Waitlist Form -->
-<!--   <section class="py-20 px-6 text-center fade-up">
+  <section class="py-20 px-6 text-center fade-up">
     <h2 class="text-3xl md:text-4xl font-semibold mb-6">Join the Early Bird Waitlist</h2>
     <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScOSsSoJ7V_QdKTPDQj1o8otQm1bG_pLb9dND1ol_DVZvlz5Q/formResponse" method="POST" target="_self">
         <input type="email" name="entry.1276738308" placeholder="Enter your email" required class="flex-1 px-4 py-3 rounded-xl text-black focus:outline-none">
         <button type="submit" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 rounded-xl font-semibold shadow-lg">Join</button>
     </form>
-  </section> -->
-
-  <section class="py-20 px-6 text-center fade-up">
-    <h2 class="text-3xl md:text-4xl font-semibold mb-6">Join the Early Bird Waitlist</h2>
-
-    <form id="emailForm" class="max-w-md mx-auto flex flex-col sm:flex-row items-center gap-4">
-        <input type="email" name="email" placeholder="Enter your email" required class="flex-1 px-4 py-3 rounded-xl text-black focus:outline-none">
-        <button type="submit" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 rounded-xl font-semibold shadow-lg">Join</button>
-    </form>
-
-    <div id="responseMessage" class="mt-4 text-green-600 font-semibold opacity-0 transition-opacity duration-500"></div>
-</section>
-
-<style>
-#responseMessage.show {
-    opacity: 1;
-}
-</style>
-
-<script>
-document.getElementById('emailForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const form = e.target;
-    const formData = new FormData(form);
-    const data = new URLSearchParams();
-    for (const pair of formData) {
-        data.append(pair[0], pair[1]);
-    }
-
-    fetch('https://script.google.com/macros/s/AKfycbyRHMFGg7wcJhTLdJYoDYN7Gz4QSSvitn7U586vbyonHsxy2C4c8NniD3VzHqD2LDMN/exec', {
-        method: 'POST',
-        body: data
-    })
-    .then(response => response.json())
-    .then(response => {
-        const msgEl = document.getElementById('responseMessage');
-        if (response.status === 'success') {
-            msgEl.innerHTML = '✅ Thank you! You are on the waitlist.';
-            msgEl.classList.add('show');
-            form.reset();
-            setTimeout(() => msgEl.classList.remove('show'), 5000);
-        } else {
-            msgEl.innerText = '❌ Something went wrong. Please try again.';
-            msgEl.classList.add('show');
-        }
-    })
-    .catch(() => {
-        const msgEl = document.getElementById('responseMessage');
-        msgEl.innerText = '❌ Something went wrong. Please try again.';
-        msgEl.classList.add('show');
-    });
-});
-</script>
+  </section>
 
   <!-- Footer -->
   <footer class="py-8 text-center text-gray-400 text-sm fade-up">
