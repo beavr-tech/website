@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&family=Instrument+Serif:ital@0;1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* Beavr Design System - White & Vivid Blue (#2284F4) */
+
+@layer base {
+  :root {
+    /* Core Brand Colors - HSL format */
+    --primary: 211 91% 55%; /* #2284F4 vivid blue */
+    --primary-foreground: 0 0% 100%; /* white text on blue */
+    
+    /* Backgrounds */
+    --background: 0 0% 100%; /* pure white */
+    --foreground: 0 0% 8%; /* near-black for primary text */
+    
+    /* Card surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+    
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+    
+    /* Secondary - subtle blue tints */
+    --secondary: 211 91% 97%; /* very light blue */
+    --secondary-foreground: 211 91% 55%;
+    
+    /* Muted text */
+    --muted: 211 20% 96%;
+    --muted-foreground: 0 0% 40%; /* 60% opacity equivalent */
+    
+    /* Accent - same as primary for consistency */
+    --accent: 211 91% 55%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Borders - blue at low opacity */
+    --border: 211 91% 90%;
+    --input: 211 91% 90%;
+    --ring: 211 91% 55%;
+    
+    /* Radius */
+    --radius: 0.75rem;
+    
+    /* Sidebar - keeping for compatibility */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 8%;
+    --sidebar-primary: 211 91% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 211 91% 97%;
+    --sidebar-accent-foreground: 211 91% 55%;
+    --sidebar-border: 211 91% 90%;
+    --sidebar-ring: 211 91% 55%;
+    
+    /* Custom tokens for landing page */
+    --text-primary: 0 0% 15%; /* rgba(0,0,0,0.85) equivalent */
+    --text-secondary: 0 0% 40%; /* rgba(0,0,0,0.6) equivalent */
+    --blue-glow: 211 91% 55%;
+  }
+
+  /* No dark mode - strict white/blue palette */
+  .dark {
+    --primary: 211 91% 55%;
+    --primary-foreground: 0 0% 100%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+    --secondary: 211 91% 97%;
+    --secondary-foreground: 211 91% 55%;
+    --muted: 211 20% 96%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 211 91% 55%;
+    --accent-foreground: 0 0% 100%;
+    --border: 211 91% 90%;
+    --input: 211 91% 90%;
+    --ring: 211 91% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold tracking-tight;
+  }
+}
+
+@layer utilities {
+  /* Text with primary/secondary opacity styling */
+  .text-primary-strong {
+    @apply text-foreground;
+  }
+  
+  .text-secondary-muted {
+    @apply text-muted-foreground;
+  }
+
+  /* Blue glow effect for hover states */
+  .blue-glow {
+    box-shadow: 0 10px 40px -10px hsl(var(--primary) / 0.4);
+  }
+  
+  .blue-glow-sm {
+    box-shadow: 0 4px 20px -4px hsl(var(--primary) / 0.3);
+  }
+
+  /* Card hover lift effect */
+  .card-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .card-hover:hover {
+    @apply -translate-y-1 blue-glow-sm;
+  }
+
+  /* Blue top border accent */
+  .blue-top-border {
+    @apply border-t-4 border-t-primary;
+  }
+
+  /* Animated underline for links */
+  .animated-underline {
+    @apply relative inline-block;
+  }
+  
+  .animated-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-primary scale-x-0 origin-right transition-transform duration-300;
+  }
+  
+  .animated-underline:hover::after {
+    @apply scale-x-100 origin-left;
+  }
+
+  /* Section spacing */
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  /* Container max-width */
+  .container-narrow {
+    @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}

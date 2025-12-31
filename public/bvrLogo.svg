@@ -1,0 +1,26 @@
+<svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_n_3037_1298)">
+<path d="M18.0513 0H3.83121C1.92676 0 1.73457 2.95206 3.69731 2.95206H7.71823C8.89329 2.95206 8.8678 3.77666 8.70818 4.18896L5.82655 13.4992C5.56917 14.4598 6.56913 15.2128 7.32348 15.2128H13.5331C14.775 15.2128 15.0569 16.4176 14.9613 16.7858L13.0719 22.8381C12.74 23.9205 12.1171 24.1473 11.4483 24.1473H1.5776C-0.460999 24.1473 -0.589753 27.1204 1.5776 27.1204H23.6674C25.1575 27.1204 25.4659 26.7003 25.7789 25.9177L29.1079 15.1504C29.3515 14.3493 28.4872 13.4797 27.6928 13.4797H18.4418C17.0327 13.4797 16.2932 12.5663 16.5532 11.5643L19.4512 2.30711C19.9392 0.743562 18.9661 0 18.0513 0Z" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_n_3037_1298" x="0" y="0" width="29.1494" height="27.1206" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="12.770845413208008 12.770845413208008" stitchTiles="stitch" numOctaves="3" result="noise" seed="2226" />
+<feComponentTransfer in="noise" result="coloredNoise1">
+<feFuncR type="linear" slope="2" intercept="-0.5" />
+<feFuncG type="linear" slope="2" intercept="-0.5" />
+<feFuncB type="linear" slope="2" intercept="-0.5" />
+<feFuncA type="discrete" tableValues="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "/>
+</feComponentTransfer>
+<feComposite operator="in" in2="shape" in="coloredNoise1" result="noise1Clipped" />
+<feComponentTransfer in="noise1Clipped" result="color1">
+<feFuncA type="table" tableValues="0 0.15" />
+</feComponentTransfer>
+<feMerge result="effect1_noise_3037_1298">
+<feMergeNode in="shape" />
+<feMergeNode in="color1" />
+</feMerge>
+</filter>
+</defs>
+</svg>
