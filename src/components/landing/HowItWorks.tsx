@@ -5,23 +5,23 @@ import { Download, Target, Trophy, Rocket } from "lucide-react";
 const steps = [
   {
     icon: Download,
-    title: "Sign Up & Set Goals",
-    description: "Tell us what habits you want to build. Our AI analyzes your lifestyle and creates a personalized plan.",
+    title: "Personalised Onboarding",
+    description: "Tell us about your habits, triggers, and lifestyle. Beavr's AI builds a personalised, science-backed plan tailored to your goals.",
   },
   {
     icon: Target,
-    title: "Complete Daily Missions",
-    description: "Receive bite-sized challenges tailored to your schedule. Each mission builds momentum toward your bigger goals.",
+    title: "Guided Habit Program",
+    description: "Follow a structured, psychiatry- and behavioral science-based program designed to rewire habits through small, repeatable actions.",
   },
   {
     icon: Trophy,
-    title: "Earn & Level Up",
-    description: "Collect points, unlock badges, and climb the leaderboard. Watch your progress compound over time.",
+    title: "Learn, Play & Get Support",
+    description: "Engage with gamified modules, chat with Beavr AI for instant guidance, and connect with licensed professionals through live doctor-led sessions when you need deeper support.",
   },
   {
     icon: Rocket,
-    title: "Transform Your Life",
-    description: "After 66 days, habits become automatic. You'll have built systems that work without willpower.",
+    title: "Data-Driven Transformation",
+    description: "Using insights from IoT devices and wearables, Beavr tracks patterns, delivers timely interventions, and helps habits become automatic—without relying on willpower.",
   },
 ];
 

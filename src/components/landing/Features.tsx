@@ -6,31 +6,31 @@ import { Bot, Gamepad2, Users2, LineChart } from "lucide-react";
 const features = [
   {
     icon: Bot,
-    title: "AI Habit Buddy",
+    title: "AI-Powered Coaching",
     description:
-      "Your personal AI coach adapts to your patterns, suggests optimal times, and provides encouragement when you need it most.",
-    highlight: "Personalized coaching",
+      "Your personal AI coach learns your unique patterns, predicts challenges before they happen, and delivers personalized guidance at exactly the right moment.",
+    highlight: "Intelligent Automation",
   },
   {
     icon: Gamepad2,
-    title: "Gamified Missions",
+    title: "Behavioral Science Engine",
     description:
-      "Transform boring routines into exciting challenges. Earn rewards, unlock achievements, and level up your life.",
-    highlight: "Make habits fun",
-  },
-  {
-    icon: Users2,
-    title: "Community Accountability",
-    description:
-      "Join habit squads with like-minded people. Share progress, celebrate wins, and stay motivated together.",
-    highlight: "Never go alone",
+      "Built on proven behavioral psychology principles. Gamified challenges, reward systems, and habit stacking make consistency feel natural and rewarding.",
+    highlight: "Science-Backed Methods",
   },
   {
     icon: LineChart,
-    title: "Personalized Insights",
+    title: "Neuroplasticity Training",
     description:
-      "Deep analytics show what's working. Understand your patterns and optimize your routines for maximum success.",
-    highlight: "Data-driven growth",
+      "Leverages brain science to rewire habits at a neural level. Progressive challenges strengthen pathways, making positive behaviors automatic over time.",
+    highlight: "Brain Rewiring",
+  },
+  {
+    icon: Users2,
+    title: "IoT Integration",
+    description:
+      "Seamlessly connects with your smart devices and wearables. Auto-track workouts, sleep, and activities—no manual logging needed.",
+    highlight: "Smart Connectivity",
   },
 ];
 
@@ -42,11 +42,11 @@ export function Features() {
         title="Everything You Need to Succeed"
         description={
           <>
-            Beavr combines{" "}
+            Beavr blends{" "}
             <span className="text-primary font-medium italic">
-              AI intelligence, game mechanics, and community power
+              AI, behavioral science, neuroplasticity, and IoT 
             </span>
-            , to make habit-building effortless.
+             {" "} to make habit-building feel effortless.
           </>
         }
       />

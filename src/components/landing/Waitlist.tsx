@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
+import { supabase } from "@/lib/supabaseClient"; 
 
 export function Waitlist() {
   const [email, setEmail] = useState("");
@@ -15,9 +16,23 @@ export function Waitlist() {
     if (!email) return;
 
     setIsLoading(true);
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setIsSubmitted(true);
+
+    const { error } = await supabase
+      .from("waitlist")
+      .insert([
+        {
+          email,
+          source: "website",
+          platform: "unknown",
+        },
+      ]);
+
+    if (!error) {
+      setIsSubmitted(true);
+      setEmail("");
+    }
+
+    // UX remains unchanged even on error
     setIsLoading(false);
   };
 
@@ -31,7 +46,9 @@ export function Waitlist() {
           className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-primary/10 rounded-full"
         >
           <Sparkles className="w-4 h-4 text-primary" />
-          <span className="text-sm font-medium text-primary">Limited Early Access</span>
+          <span className="text-sm font-medium text-primary">
+            Limited Early Access
+          </span>
         </motion.div>
 
         <motion.h2
@@ -51,7 +68,9 @@ export function Waitlist() {
           transition={{ delay: 0.2 }}
           className="mt-4 text-lg md:text-xl text-muted-foreground"
         >
-          Join 2,500+ people building better habits. Get early access and exclusive founding member benefits.
+          We’re opening early access in limited phases. Join the waitlist to get
+          priority access to Beavr as we roll out new features and guided
+          programs.{" "}
         </motion.p>
 
         <motion.div
@@ -76,14 +95,19 @@ export function Waitlist() {
                 <CheckCircle2 className="w-8 h-8 text-primary-foreground" />
               </motion.div>
               <div>
-                <h3 className="text-xl font-bold text-foreground">You're on the list!</h3>
+                <h3 className="text-xl font-bold text-foreground">
+                  You're on the list!
+                </h3>
                 <p className="mt-2 text-muted-foreground">
                   We'll send you an email when it's your turn to join.
                 </p>
               </div>
             </motion.div>
           ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+            >
               <Input
                 type="email"
                 placeholder="Enter your email"
@@ -102,7 +126,11 @@ export function Waitlist() {
                   <span className="flex items-center gap-2">
                     <motion.span
                       animate={{ rotate: 360 }}
-                      transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                      transition={{
+                        duration: 1,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
                       className="w-4 h-4 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full"
                     />
                     Joining...
@@ -118,7 +146,6 @@ export function Waitlist() {
           )}
         </motion.div>
 
-        {/* Trust badges */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

@@ -7,27 +7,33 @@ import { cn } from "@/lib/utils";
 const faqs = [
   {
     question: "What makes Beavr different from other habit apps?",
-    answer: "Beavr combines AI-powered personalization, game mechanics, and community accountability—three elements that research shows are critical for lasting behavior change. Most apps only offer one or two of these.",
+    answer:
+      "Beavr combines AI-powered personalization, game mechanics, and community accountability—three elements that research shows are critical for lasting behavior change. Most apps only offer one or two of these.",
   },
   {
     question: "Is Beavr free to use?",
-    answer: "We'll offer a generous free tier with core features. Premium plans will unlock AI coaching, advanced analytics, and exclusive community features. Early waitlist members get special founding member pricing.",
+    answer:
+      "We'll offer a generous free tier with core features. Premium plans will unlock AI coaching, advanced analytics, and exclusive community features. Early waitlist members get special founding member pricing.",
   },
   {
     question: "How does the AI Habit Buddy work?",
-    answer: "Our AI learns from your patterns—when you're most productive, what triggers slip-ups, and what motivates you. It then provides personalized suggestions, optimal timing, and encouragement tailored to your unique journey.",
+    answer:
+      "Our AI learns from your patterns—when you're most productive, what triggers slip-ups, and what motivates you. It then provides personalized suggestions, optimal timing, and encouragement tailored to your unique journey.",
   },
   {
     question: "Can I use Beavr with friends or family?",
-    answer: "Absolutely! You can create private habit squads with friends, family, or colleagues. Share progress, set group challenges, and keep each other accountable. It's one of our most popular features.",
+    answer:
+      "Absolutely! You can create private habit squads with friends, family, or colleagues. Share progress, set group challenges, and keep each other accountable. It's one of our most popular features.",
   },
   {
     question: "When will Beavr launch?",
-    answer: "We're currently in early access with a limited group of users. Join the waitlist to be among the first to get access when we expand. Waitlist members also get exclusive benefits.",
+    answer:
+      "Beavr is rolling out in phases. You can join the waitlist today to get early access as we open new spots and launch upcoming updates. Waitlist members receive priority access and exclusive benefits.",
   },
   {
     question: "What platforms will Beavr be available on?",
-    answer: "We're launching first on iOS and Android, with a web app following shortly after. All platforms will sync seamlessly so you can track habits from any device.",
+    answer:
+      "We're launching first on iOS and Android, with a web app following shortly after. All platforms will sync seamlessly so you can track habits from any device.",
   },
 ];
 

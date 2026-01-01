@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "#features", label: "Features" },
+  { href: "#problem", label: "Why Beavr" },
   { href: "#how-it-works", label: "How It Works" },
-  { href: "#community", label: "Community" },
+  { href: "#upcoming-events", label: "Upcoming Events" },
   { href: "#faq", label: "FAQ" },
 ];
 
@@ -66,9 +66,11 @@ export function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <Button size="sm">
-            Join Waitlist
-          </Button>
+          <a href="#waitlist">
+            <Button size="sm">
+              Join Waitlist
+            </Button>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -103,12 +105,11 @@ export function Navbar() {
                 </a>
               ))}
               <div className="flex flex-col gap-2 pt-4 border-t border-border">
-                <Button variant="outline" className="w-full">
-                  Sign In
-                </Button>
-                <Button className="w-full">
-                  Join Waitlist
-                </Button>
+                <a href="#waitlist" onClick={() => setIsOpen(false)}>
+                  <Button className="w-full">
+                    Join Waitlist
+                  </Button>
+                </a>
               </div>
             </div>
           </motion.div>

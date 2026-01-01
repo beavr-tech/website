@@ -2,6 +2,8 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
 import { LucideIcon } from "lucide-react";
+import { Calendar, Clock, Video, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface CardProps {
   children: ReactNode;
@@ -109,6 +111,116 @@ export function ProblemCard({ icon, title, description, className }) {
       <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
         {description}
       </p>
+    </motion.div>
+  );
+}
+
+
+interface EventCardProps {
+  image: string;
+  imageAlt: string;
+  title: string;
+  description: string;
+  date: string;
+  time: string;
+  platform: string;
+  hostName: string;
+  hostTitle: string;
+  hostOrganization: string;
+  hostEmoji?: string;
+  registrationLink: string;
+  limitedSeats?: boolean;
+  index?: number;
+}
+
+export function EventCard({
+  image,
+  imageAlt,
+  title,
+  description,
+  date,
+  time,
+  platform,
+  hostName,
+  hostTitle,
+  hostOrganization,
+  hostEmoji = "👨‍⚕️",
+  registrationLink,
+  limitedSeats = false,
+  index = 0,
+}: EventCardProps) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="bg-card rounded-2xl overflow-hidden border border-border shadow-lg hover:shadow-xl transition-shadow"
+    >
+      {/* Event Image */}
+      <div className="relative aspect-video overflow-hidden">
+        <img 
+          src={image} 
+          alt={imageAlt} 
+          className="w-full h-full object-contain bg-secondary/20"
+        />
+        {limitedSeats && (
+          <div className="absolute top-3 right-3 bg-primary text-primary-foreground px-3 py-1.5 rounded-full text-xs font-bold shadow-lg">
+            *Limited Seats
+          </div>
+        )}
+      </div>
+
+      {/* Event Details */}
+      <div className="p-5">
+        <div className="flex flex-wrap gap-3 mb-4">
+          <div className="flex items-center gap-1.5 text-muted-foreground">
+            <Calendar className="w-4 h-4 text-primary" />
+            <span className="text-xs font-medium">{date}</span>
+          </div>
+          <div className="flex items-center gap-1.5 text-muted-foreground">
+            <Clock className="w-4 h-4 text-primary" />
+            <span className="text-xs font-medium">{time}</span>
+          </div>
+          <div className="flex items-center gap-1.5 text-muted-foreground">
+            <Video className="w-4 h-4 text-primary" />
+            <span className="text-xs font-medium">{platform}</span>
+          </div>
+        </div>
+
+        <h3 className="text-lg md:text-xl font-bold text-foreground mb-2">
+          {title}
+        </h3>
+        
+        <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+          {description}
+        </p>
+
+        <div className="bg-secondary/50 rounded-lg p-3 mb-4">
+          <div className="flex items-start gap-2">
+            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <span className="text-xl">{hostEmoji}</span>
+            </div>
+            <div>
+              <p className="font-bold text-foreground text-sm">{hostName}</p>
+              <p className="text-xs text-muted-foreground">{hostTitle}</p>
+              <p className="text-xs text-muted-foreground">{hostOrganization}</p>
+            </div>
+          </div>
+        </div>
+
+        <a 
+          href={registrationLink} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="block"
+        >
+          <Button size="default" className="w-full text-sm">
+            Register Now
+            <ExternalLink className="w-4 h-4 ml-2" />
+          </Button>
+        </a>
+      </div>
     </motion.div>
   );
 }
