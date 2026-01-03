@@ -6,7 +6,7 @@ export function MobileCTA() {
   return (
     <motion.div
       initial={{ y: 100 }}
-      animate={{ y: 0 }}
+      animate={{ y: 0, backgroundColor: "transparent" }}
       transition={{ delay: 1, type: "spring" }}
       className="fixed bottom-0 left-0 right-0 p-4 bg-background/95 backdrop-blur-lg border-t border-border md:hidden z-40"
     >

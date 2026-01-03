@@ -155,7 +155,15 @@ export function EventCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="bg-card rounded-2xl overflow-hidden border border-border shadow-lg hover:shadow-xl transition-shadow"
+      whileHover={{ y: -4 }}
+      className="bg-card rounded-2xl overflow-hidden border border-border transition-all duration-300"
+      style={{ boxShadow: '0 4px 20px rgba(34, 132, 244, 0.15), 0 0 40px rgba(34, 132, 244, 0.08)' }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.boxShadow = '0 8px 30px rgba(34, 132, 244, 0.25), 0 0 60px rgba(34, 132, 244, 0.15)';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.boxShadow = '0 4px 20px rgba(34, 132, 244, 0.15), 0 0 40px rgba(34, 132, 244, 0.08)';
+      }}
     >
       {/* Event Image */}
       <div className="relative aspect-video overflow-hidden">

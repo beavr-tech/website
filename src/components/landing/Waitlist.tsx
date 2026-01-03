@@ -99,7 +99,7 @@ export function Waitlist() {
                   You're on the list!
                 </h3>
                 <p className="mt-2 text-muted-foreground">
-                  We'll send you an email when it's your turn to join.
+                  We'll reach out as we introduce more tools to support your journey.
                 </p>
               </div>
             </motion.div>
@@ -137,7 +137,7 @@ export function Waitlist() {
                   </span>
                 ) : (
                   <>
-                    Join Waitlist
+                    Join
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </>
                 )}

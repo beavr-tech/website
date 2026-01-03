@@ -19,6 +19,7 @@ const upcomingEvents = [
     limitedSeats: true,
   },
   
+  
 ];
 
 export function EventPreview() {

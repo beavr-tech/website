@@ -88,7 +88,7 @@ export function Navbar() {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
+            animate={{ opacity: 1, height: "auto", backgroundColor: "transparent" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className="md:hidden bg-background border-b border-border overflow-hidden rounded-b-3xl mt-2 backdrop-blur-lg"
@@ -104,13 +104,13 @@ export function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <div className="flex flex-col gap-2 pt-4 border-t border-border">
+              {/* <div className="flex flex-col gap-2 pt-4 border-t border-border">
                 <a href="#waitlist" onClick={() => setIsOpen(false)}>
                   <Button className="w-full">
                     Join Waitlist
                   </Button>
                 </a>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         )}
