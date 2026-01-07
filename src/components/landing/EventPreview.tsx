@@ -15,7 +15,7 @@ const upcomingEvents = [
     hostTitle: "Dept. of Psychiatry",
     hostOrganization: "NDMC Medical College, New Delhi",
     hostEmoji: "👨‍⚕️",
-    registrationLink: "https://u.payu.in/PAYUMN/mIWbFEB0PsTx",
+    registrationLink: "https://u.payu.in/PAYUMN/9IlRfSC00u1C",
     limitedSeats: true,
   },
   
