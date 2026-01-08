@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 
 const queryClient = new QueryClient();
@@ -26,7 +27,7 @@ const App = () => (
 
       {/* Vercel Analytics */}
       <Analytics />
-
+      <SpeedInsights />
     </TooltipProvider>
   </QueryClientProvider>
 );
