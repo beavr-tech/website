@@ -8,6 +8,7 @@ const navLinks = [
   { href: "#problem", label: "Why Beavr" },
   { href: "#how-it-works", label: "How It Works" },
   { href: "#upcoming-events", label: "Upcoming Events" },
+  { href: "#articles", label: "Articles" },
   { href: "#faq", label: "FAQ" },
 ];
 
