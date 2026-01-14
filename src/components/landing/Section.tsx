@@ -95,8 +95,7 @@ export function SectionHeader({
           transition={{ duration: 0.5, delay: 0.2 }}
           className={cn(
             "mt-4 text-lg md:text-xl text-muted-foreground",
-            "xl:whitespace-nowrap",
-            centered && "max-w-none mx-auto"
+            centered && "max-w-4xl mx-auto"
           )}
         >
           {description}
