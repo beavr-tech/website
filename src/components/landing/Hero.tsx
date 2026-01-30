@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { FaGooglePlay, FaApple } from "react-icons/fa6";
+import PlayStoreBadge from "@/assets/playstore.svg";
+import AppStoreBadge from "@/assets/appstore.svg";
 
 export function Hero() {
   return (
@@ -75,31 +76,25 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-8 md:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-md sm:max-w-none mx-auto"
+            className="mt-8 md:mt-10 flex flex-row items-center justify-center gap-2 sm:gap-4 mx-auto"
           >
             <a
               href="https://play.google.com/store/apps/details?id=com.beavr.lifestyle&pcampaignid=web_share"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button
-                size="lg"
-                className="w-full sm:w-auto text-base px-6 sm:px-8 py-6 shadow-blue-glow hover:shadow-blue-glow-lg transition-shadow [&_svg]:w-5 [&_svg]:h-5"
-              >
-                <FaGooglePlay className="mr-3" />
-                Download on Play Store
-              </Button>
+              <img
+                src="/playStore.svg"
+                alt="Download on Play Store"
+                className="h-10 sm:h-12 w-auto"
+              />
             </a>
             <div className="relative group">
-              <Button
-                size="lg"
-                variant="outline"
-                disabled
-                className="w-full sm:w-auto text-base px-6 sm:px-8 py-6 border-primary text-primary opacity-50 cursor-not-allowed [&_svg]:w-5 [&_svg]:h-5"
-              >
-                <FaApple className="mr-3" />
-                Download on App Store
-              </Button>
+              <img
+                src="/apple.svg"
+                alt="Download on App Store"
+                className="h-10 sm:h-12 w-auto"
+              />
 
               <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-gray-900 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
                 Coming Soon
