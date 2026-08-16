@@ -3,7 +3,7 @@ import { Hero } from "@/components/landing/Hero";
 import { Problem } from "@/components/landing/Problem";
 import { Features } from "@/components/landing/Features";
 import { HowItWorks } from "@/components/landing/HowItWorks";
-import { EventPreview } from "@/components/landing/EventPreview";
+// import { EventPreview } from "@/components/landing/EventPreview";
 import { Articles } from "@/components/landing/Articles";
 import { FAQ } from "@/components/landing/FAQ";
 import { Waitlist } from "@/components/landing/Waitlist";
@@ -19,7 +19,7 @@ const Index = () => {
         <Problem />
         <Features />
         <HowItWorks />
-        <EventPreview />
+        {/* <EventPreview /> */}
         <Articles />
         <FAQ />
         <Waitlist />
